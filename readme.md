@@ -51,28 +51,33 @@ that the measured motion represents the movement of the utensil itself.
 
 ## Repository Structure
 
-```text
-awareness-fork/
-├── config/
-│   └── deployment_config_v4.json
+awareness-fork-public/
 ├── data/
 │   ├── examples/
-│   │   ├── example_raw_session.csv
-│   │   └── example_annotations.csv
+│   │   ├── raw_examples
+│   │   └── annotation_examples
 │   └── processed/
 │   └── metadata/
 │
-├── firmware/
-│   └── [ESP32 firmware file]
-├── models/bite_detector/v4_validated
-│   ├── bite_lstm_v4_final.keras
-│   ├── bite_normalization_stats.csv
-│   ├── bite_lstm_metrics.json
-│   ├── deployment_config.json
-│   ├── bite_lstm_val_summary.text     
-│   └── bite_windows_50_step_5_normalized
-├── results/
-│   └── .gitkeep
+├── firmware/esp32_imu_logger
+│   └── esp32_imu_logger.ino
+│
+├── models/bite_detector/
+│   ├── v4_validated
+│   │   ├── bite_lstm_v4_final.keras
+│   │   ├── bite_normalization_stats.csv
+│   │   ├── bite_lstm_metrics.json
+│   │   ├── deployment_config.json
+│   │   ├── bite_lstm_val_summary.text     
+│   │   └── bite_windows_50_step_5_normalized
+│   └── v4_test
+│       ├── bite_event_test_ground_truth.csv
+│       ├── bite_event_test_predictions.csv
+│       ├── bite_event_test_session_summary.csv
+│       ├── bite_lstm_test_confusion_matrix.csv
+│       ├── bite_lstm_test_predictions.csv
+│       └── bite_lstm_test_summary.txt
+│
 ├── scripts/
 │   ├── validate_annotations.py
 │   ├── create_splits.py
@@ -84,6 +89,7 @@ awareness-fork/
 │   ├── replay_bite_detector.py
 │   ├── live_bite_detector.py
 │   └── live_bite_detector_v4.py
+│
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -91,10 +97,8 @@ awareness-fork/
 
 ## Data and Model Pipeline
 
-The project uses a reproducible pipeline to prepare sensor data, train the
-model, and evaluate bite events:
+The project uses a reproducible pipeline to prepare sensor data, train the model and evaluate bite events:
 
-```text
 validate_annotations.py
         ↓
 create_splits.py
@@ -108,21 +112,18 @@ train_bite_lstm.py
 evaluate_bite_events.py
         ↓
 test_bite_events.py
-```
 
 The raw data was recorded in approximately 30-second sessions. Each session has
 a raw IMU CSV file and a corresponding video-derived annotation CSV file.
 
 The initial annotation categories are:
 
-```text
 bite, scoop, cut, rest, other
-```
 
 For model training, they are converted into the binary classes `bite` and
 `not_bite`.
 
-## Installation
+### Installation
 
 ### 1. Clone the repository
 
@@ -161,17 +162,13 @@ the deployment configuration matches the connected device. Windows power mode sh
 
 Run the V4 live detector from the repository root:
 
-```bash
 python scripts/live_bite_detector_v4.py
-```
 
 The live detector loads:
 
-```text
 models/bite_lstm_v4_final.keras
 models/v4_normalization_statistics.csv
 config/deployment_config_v4.json
-```
 
 ### V4 Event Configuration
 
@@ -197,9 +194,9 @@ detector. This allows repeatable testing without a connected ESP32.
 
 Example:
 
-```bash
+
 python scripts/replay_bite_detector.py data/examples/example_raw_session.csv
-```
+
 
 Adjust the command if your script expects command-line options or a different
 file path.

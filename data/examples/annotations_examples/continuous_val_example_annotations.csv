@@ -1,0 +1,16 @@
+﻿start_time_s,end_time_s,label,other_type,notes
+0.0,1.8,other,hold
+1.8,3.6,scoop
+3.6,5.9,cut
+5.9,8.0,other,hold
+8.0,9.2,bite
+9.2,10.1,other,transition
+10.1,11.8,other,hold
+11.8,15.2,other,gesture
+15.2,18.7,other,putdown
+18.7,21.8,rest
+21.8,24.0,other,pickup
+24.0,25.8,scoop
+25.8,26.5,other,transition
+26.5,27.5,bite
+27.5,30.0,other,reposition

@@ -1,0 +1,17 @@
+﻿start_time_s,end_time_s,label,other_type,notes
+0.0,2.2,rest
+2.2,6.6,other,pickup
+6.6,10.4,other,gesture
+10.4,11.1,other,hold
+11.1,13.5,other,reposition
+13.5,14.3,other,hold
+14.3,16.2,other,gesture
+16.2,17.4,other,hold
+17.4,18.6,other,gesture
+18.6,19.3,other,hold
+19.3,20.3,scoop
+20.3,21.0,other,transition
+21.0,23.5,other,hold
+23.5,25.3,other,gesture
+25.3,26.4,other,hold
+26.4,30.0,other,gesture
