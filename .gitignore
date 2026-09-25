@@ -1,0 +1,103 @@
+# ============================================================
+# Private raw recordings and video material
+# ============================================================
+data/raw/
+data/annotations/
+videos/
+recordings/
+
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# ============================================================
+# Generated / processed datasets
+# Keep the folder structure only if a .gitkeep file is present
+# ============================================================
+data/processed/*
+!data/processed/.gitkeep
+
+# ============================================================
+# Generated evaluation and runtime results
+# Uncomment only if you keep a results directory
+# ============================================================
+results/
+logs/
+outputs/
+
+# ============================================================
+# Models
+# Ignore all model artifacts except the final V4 deployment bundle
+# ============================================================
+models/*
+!models/bite_lstm_v4_final.keras
+!models/v4_normalization_statistics.csv
+!models/deployment_config_v4.json
+
+# ============================================================
+# Python bytecode, caches and test outputs
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ============================================================
+# Virtual environments
+# ============================================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ============================================================
+# Jupyter and temporary files
+# ============================================================
+.ipynb_checkpoints/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ============================================================
+# Visual Studio Code and other IDE settings
+# ============================================================
+.vscode/
+.idea/
+
+# ============================================================
+# Secrets and local machine-specific configuration
+# ============================================================
+.env
+.env.*
+!.env.example
+
+secrets.*
+*.key
+*.pem
+
+config_local.py
+local_settings.py
+
+# If you later create a separate local deployment config:
+models/deployment_config_local.json
+
+# ============================================================
+# Operating-system generated files
+# ============================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
