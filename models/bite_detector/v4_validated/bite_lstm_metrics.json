@@ -1,0 +1,28 @@
+{
+  "n_train": 12445,
+  "n_val": 2426,
+  "train_class_counts": {
+    "not_bite": 11677,
+    "bite": 768
+  },
+  "val_class_counts": {
+    "not_bite": 2313,
+    "bite": 113
+  },
+  "class_weight": {
+    "not_bite": 0.5328851588592961,
+    "bite": 8.102213541666666
+  },
+  "val_roc_auc": 0.9970157134166638,
+  "val_average_precision": 0.9696916650703569,
+  "selected_threshold": 0.95,
+  "selected_threshold_metrics": {
+    "threshold": 0.95,
+    "accuracy": 0.9934047815333883,
+    "precision_bite": 0.9369369369369369,
+    "recall_bite": 0.9203539823008849,
+    "f1_bite": 0.9285714285714286
+  },
+  "best_pr_curve_index": 2207,
+  "epochs_completed": 36
+}

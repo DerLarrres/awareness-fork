@@ -1,0 +1,20 @@
+{
+  "model_version": "bite_detector_v4",
+  "model_file": "bite_lstm_best.keras",
+  "window_size_samples": 50,
+  "step_size_samples": 5,
+  "sampling_rate_hz": 50.0,
+  "window_duration_s": 1.0,
+  "step_duration_s": 0.1,
+  "feature_order": ["ax", "ay", "az", "gx", "gy", "gz"],
+  "normalization_file": "bite_normalization_stats.csv",
+  "bite_probability_threshold": 0.90,
+  "min_consecutive_positive_windows": 3,
+  "refractory_period_s": 1.20,
+  "event_match_tolerance_s_validation_only": 0.5,
+  "classes": {
+    "0": "not_bite",
+    "1": "bite"
+  },
+  "notes": "V4 candidate: expanded with right-hand continuous sessions. Deployment parameters selected using validation only."
+}

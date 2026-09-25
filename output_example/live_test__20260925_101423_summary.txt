@@ -1,0 +1,30 @@
+=== LIVE-BITE-DETEKTOR V4 (LATEST-WINDOW) ===
+Session: test_
+Port: COM3
+Beendet durch Strg+C: True
+Laufzeit: 40.88 s
+Gültige Sensordatenzeilen: 2044
+Ungültige/übersprungene Serial-Zeilen: 0
+Gemessene Eingangsrate: 50.01 Hz
+Modell-Inferenzen: 364
+Gemessene Inferenzrate: 8.91 Hz
+Übersprungene veraltete Inferenzgelegenheiten: 0
+Mittlere Modell-Inferenzzeit: 109.43 ms
+Mediane Modell-Inferenzzeit: 108.94 ms
+p95 Modell-Inferenzzeit: 114.96 ms
+Maximale Modell-Inferenzzeit: 141.33 ms
+Ausgelöste Bite-Ereignisse: 7
+Bite-Abstände unter 18.0 s: 6
+Noch offener positiver Run beim Beenden: nein
+
+=== EINGEFRORENE V4-PARAMETER ===
+Fenstergröße: 50 Samples
+Schrittweite als Mindestfortschritt: 5 Samples
+Threshold: 0.90
+Min. positive Live-Inferenzen: 3
+Sperrzeit: 1.20 s
+Grenzwert kurzer Bite-Abstand: < 18.0 s
+
+Rohdaten: outputs\live\v4\live_test__20260925_101423_raw.csv
+Wahrscheinlichkeiten: outputs\live\v4\live_test__20260925_101423_probabilities.csv
+Events: outputs\live\v4\live_test__20260925_101423_bite_events.csv

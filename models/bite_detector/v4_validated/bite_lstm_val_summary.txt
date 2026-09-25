@@ -1,0 +1,22 @@
+=== BITE-LSTM VALIDATION ===
+Selected threshold: 0.95
+ROC-AUC: 0.9970
+Average precision / PR-AUC: 0.9697
+Accuracy: 0.9934
+Bite precision: 0.9369
+Bite recall: 0.9204
+Bite F1: 0.9286
+
+Confusion matrix (rows=actual, columns=predicted):
+[[2306    7]
+ [   9  104]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+    not_bite     0.9961    0.9970    0.9965      2313
+        bite     0.9369    0.9204    0.9286       113
+
+    accuracy                         0.9934      2426
+   macro avg     0.9665    0.9587    0.9626      2426
+weighted avg     0.9934    0.9934    0.9934      2426

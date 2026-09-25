@@ -26,14 +26,6 @@ results/
 logs/
 outputs/
 
-# ============================================================
-# Models
-# Ignore all model artifacts except the final V4 deployment bundle
-# ============================================================
-models/*
-!models/bite_lstm_v4_final.keras
-!models/v4_normalization_statistics.csv
-!models/deployment_config_v4.json
 
 # ============================================================
 # Python bytecode, caches and test outputs
