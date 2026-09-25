@@ -69,6 +69,7 @@ awareness-fork/
 │   ├── bite_normalization_stats.csv
 │   ├── bite_lstm_metrics.json
 │   ├── deployment_config.json
+│   ├── bite_lstm_val_summary.text     
 │   └── bite_windows_50_step_5_normalized
 ├── results/
 │   └── .gitkeep
@@ -181,7 +182,7 @@ The final V4 deployment configuration uses:
 | Bite-probability threshold | 0.9 |
 | Minimum consecutive positive windows | 3 |
 | Refractory period | 1.2 seconds |
-| Bite-interval awareness threshold | 10 seconds |
+| Bite-interval awareness threshold | 18 seconds |
 
 The detector evaluates overlapping sensor windows approximately every 0.1
 seconds. A detected bite event is created only after three consecutive positive
